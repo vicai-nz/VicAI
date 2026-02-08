@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=Space+Mono&amp;display=swap');
+  </style>
+  <rect width="800" height="200" fill="#1A1A1A"/>
+  <text x="400" y="118" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="110" font-weight="700" letter-spacing="-3">
+    <tspan fill="#F2F0E6">Vic</tspan><tspan fill="#BBFF00">AI</tspan>
+  </text>
+  <text x="400" y="162" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#888" letter-spacing="6">VICTORIA ARTIFICIAL INTELLIGENCE SOCIETY</text>
+</svg>

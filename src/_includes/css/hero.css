@@ -1,0 +1,202 @@
+/* ===== HERO ===== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: var(--border-thick);
+  background-image:
+    radial-gradient(circle, var(--color-border) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 12px 12px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__overline {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  background: var(--color-accent);
+  padding: var(--space-xs) var(--space-md);
+  border: 2px solid var(--color-ink);
+  margin-bottom: var(--space-xl);
+}
+
+.hero__title {
+  font-size: var(--text-hero);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__title-accent {
+  color: var(--color-accent);
+  -webkit-text-stroke: 2px var(--color-ink);
+  paint-order: stroke fill;
+}
+
+.hero__tagline {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  max-width: 600px;
+  margin-bottom: var(--space-2xl);
+  line-height: 1.5;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+/* Hero decorative elements */
+.hero__decor {
+  position: absolute;
+  width: clamp(250px, 45vw, 550px);
+  height: clamp(250px, 45vw, 550px);
+  border: var(--border-w-thick) solid var(--color-accent);
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%) rotate(12deg);
+  z-index: 1;
+  animation: hero-float 8s ease-in-out infinite alternate;
+}
+
+.hero__decor-inner {
+  position: absolute;
+  width: clamp(150px, 25vw, 350px);
+  height: clamp(150px, 25vw, 350px);
+  border: 3px solid var(--color-ink);
+  right: 8%;
+  top: 55%;
+  transform: translateY(-50%) rotate(-6deg);
+  z-index: 1;
+  background: var(--color-accent);
+  opacity: 0.15;
+}
+
+.hero__corner-mark {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  z-index: 1;
+}
+
+.hero__corner-mark--tl {
+  top: var(--space-xl);
+  left: var(--space-xl);
+}
+
+.hero__corner-mark--br {
+  bottom: var(--space-xl);
+  right: var(--space-xl);
+}
+
+@keyframes hero-float {
+  from { transform: translateY(-50%) rotate(12deg); }
+  to { transform: translateY(-50%) rotate(15deg); }
+}
+
+/* Page hero (shorter) */
+.page-hero {
+  padding-block: var(--space-4xl) var(--space-3xl);
+  border-bottom: var(--border-thick);
+  position: relative;
+}
+
+.page-hero__title {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-md);
+}
+
+.page-hero__subtitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  max-width: 600px;
+}
+
+/* ===== PILLAR CARDS ===== */
+.pillars {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pillars {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.pillar-card {
+  background: var(--color-surface);
+  border: var(--border-thick);
+  padding: var(--space-xl) var(--space-lg);
+  box-shadow: var(--shadow);
+  transition: transform var(--ease-fast), box-shadow var(--ease-fast);
+}
+
+.pillar-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pillar-card:nth-child(even) {
+  background: var(--color-accent);
+}
+
+.pillar-card__number {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-lg);
+  display: block;
+}
+
+.pillar-card__name {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.pillar-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.pillar-card:nth-child(even) .pillar-card__desc {
+  color: var(--color-ink);
+}
+
+/* ===== MISSION QUOTE ===== */
+.mission-quote {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.mission-text {
+  font-size: var(--text-base);
+  line-height: 1.7;
+}

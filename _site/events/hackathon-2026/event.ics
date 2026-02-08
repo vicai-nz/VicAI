@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:hWN0fxxwq2V-9Y5mMi2nG
+SUMMARY:VicAI Hackathon 2026
+DTSTAMP:20260208T073140Z
+DTSTART:20260412T090000Z
+DTEND:20260412T170000Z
+DESCRIPTION:48-hour AI hackathon. Teams of 2-4. Build something that matter
+	s for Aotearoa. Prizes from our sponsors. Food and drinks provided.
+LOCATION:The Hub\, Kelburn Campus
+ORGANIZER;CN="VicAI":MAILTO:vicai@clubs.vuw.ac.nz
+END:VEVENT
+END:VCALENDAR

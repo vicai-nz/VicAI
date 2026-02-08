@@ -1,0 +1,9 @@
+---
+pagination:
+  data: collections.calendarEvents
+  size: 1
+  alias: calEvent
+permalink: "events/{{ calEvent.data.slug }}/event.ics"
+eleventyExcludeFromCollections: true
+---
+{{ calEvent | toCalendarEvent | safe }}

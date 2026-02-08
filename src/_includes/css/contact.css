@@ -1,0 +1,108 @@
+/* ===== MAP PLACEHOLDER ===== */
+.map-placeholder {
+  border: var(--border-thick);
+  background: var(--color-surface);
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.contact-info__item {
+  font-size: var(--text-sm);
+}
+
+.contact-info__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-xs);
+  display: block;
+  color: var(--color-muted);
+}
+
+.contact-info__social {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.contact-info__social a {
+  border: 2px solid var(--color-ink);
+  padding: var(--space-sm);
+  transition: background-color var(--ease-fast), color var(--ease-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+}
+
+.contact-info__social a:hover {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+/* ===== GROUP ROW ===== */
+.group-row {
+  border: var(--border);
+  margin-bottom: -3px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  transition: background-color var(--ease-fast);
+}
+
+.group-row:hover {
+  background: var(--color-surface);
+}
+
+.group-row:nth-child(even) {
+  background: var(--color-accent);
+}
+
+.group-row:nth-child(even):hover {
+  background: var(--color-accent);
+  opacity: 0.9;
+}
+
+.group-row__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: var(--space-xl);
+  border-right: var(--border);
+  display: flex;
+  align-items: center;
+  min-width: 60px;
+  justify-content: center;
+}
+
+.group-row__content {
+  padding: var(--space-xl);
+}
+
+.group-row__name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.group-row__desc {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}

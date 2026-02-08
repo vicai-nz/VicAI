@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description or 'Victoria Artificial Intelligence Society — Advancing AI at Te Herenga Waka, Victoria University of Wellington.' }}">
+  <meta name="theme-color" content="#BBFF00">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description or site.tagline }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>{{ title }} | {{ site.name }}</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Blog Feed" href="/feed.xml">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  {# Core CSS bundles — loaded on every page #}
+  {% css %}{% include "css/reset.css" %}{% endcss %}
+  {% css %}{% include "css/typography.css" %}{% endcss %}
+  {% css %}{% include "css/layout.css" %}{% endcss %}
+  {% css %}{% include "css/nav.css" %}{% endcss %}
+  {% css %}{% include "css/buttons.css" %}{% endcss %}
+  {% css %}{% include "css/cards.css" %}{% endcss %}
+  {% css %}{% include "css/hero.css" %}{% endcss %}
+  {% css %}{% include "css/footer.css" %}{% endcss %}
+  {% css %}{% include "css/a11y.css" %}{% endcss %}
+  <link rel="stylesheet" href="{% getBundleFileUrl 'css' %}">
+</head>
+<body class="{{ bodyClass or '' }}">
+  {% include "nav.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  {# Core JS bundles — loaded on every page #}
+  {% js %}{% include "js/nav.js" %}{% endjs %}
+  {% js %}{% include "js/active-nav.js" %}{% endjs %}
+  {% js %}{% include "js/accordion.js" %}{% endjs %}
+  {% js %}{% include "js/filters.js" %}{% endjs %}
+  {% js %}{% include "js/forms.js" %}{% endjs %}
+  {% js %}{% include "js/newsletter.js" %}{% endjs %}
+  {% js %}{% include "js/copy-url.js" %}{% endjs %}
+  {% js %}{% include "js/membership.js" %}{% endjs %}
+  {% js %}{% include "js/init.js" %}{% endjs %}
+  <script src="{% getBundleFileUrl 'js' %}" defer></script>
+</body>
+</html>

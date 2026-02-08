@@ -1,0 +1,151 @@
+---
+layout: base.njk
+title: Media
+description: "Media enquiries, press releases, and student commentary on AI — from the Victoria Artificial Intelligence Society."
+---
+{% css %}{% include "css/media.css" %}{% endcss %}
+
+{# ===== PAGE HERO ===== #}
+<section class="page-hero">
+  <div class="container">
+    <span class="section__label">Media & Press</span>
+    <h1 class="page-hero__title" data-aos="fade-up">We're available for media enquiries</h1>
+    <p class="page-hero__subtitle" data-aos="fade-up">VicAI offers student perspectives and expert commentary on artificial intelligence in Aotearoa. We work with journalists, researchers, and policymakers.</p>
+  </div>
+</section>
+
+{# ===== MEDIA CONTACT ===== #}
+<section class="section">
+  <div class="container">
+    <div class="media-contact" data-aos="fade-up">
+      <div class="media-contact__grid">
+        <div>
+          <span class="media-contact__heading">Media Contact</span>
+          <div class="media-contact__detail">
+            <span class="media-contact__label">Email</span>
+            <span class="media-contact__value"><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+          </div>
+        </div>
+        <div>
+          <span class="media-contact__heading">Spokespeople</span>
+          {% for member in team.committee %}
+          {% if member.role == "President" or member.role == "Senior Advisor" %}
+          <div class="media-contact__person">
+            <span class="media-contact__person-name">{{ member.name }}</span>
+            <span class="media-contact__person-role">{{ member.role }}{% if member.role == "Senior Advisor" %}, School of Engineering & Computer Science{% endif %}</span>
+          </div>
+          {% endif %}
+          {% endfor %}
+          <p style="font-size: var(--text-sm); margin-top: var(--space-md); opacity: 0.7;">Additional spokespeople available on request for specific topics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== STUDENT COMMENTARY ===== #}
+<section class="section section--surface" data-aos="fade-up">
+  <div class="container">
+    <span class="section__label">What We Can Comment On</span>
+    <h2 class="section__title">Student perspectives on AI that matter</h2>
+    <p style="max-width: 650px; margin-bottom: var(--space-2xl); color: var(--color-muted);">Our members include computer science, law, commerce, and arts students — offering interdisciplinary perspectives that go beyond the technical. We can provide commentary, interviews, and panel participants on the following topics.</p>
+
+    <div class="media-topics">
+      <div class="media-topic" data-aos="fade-up">
+        <span class="media-topic__number">01</span>
+        <h3 class="media-topic__name">AI Safety & Alignment</h3>
+        <p class="media-topic__desc">Risks and safeguards in frontier AI systems. Our Safety & Governance team actively researches responsible AI development.</p>
+      </div>
+      <div class="media-topic" data-aos="fade-up" data-aos-delay="50">
+        <span class="media-topic__number">02</span>
+        <h3 class="media-topic__name">Large Language Models</h3>
+        <p class="media-topic__desc">How LLMs work, their capabilities and limitations, and their impact on education, work, and creative industries in New Zealand.</p>
+      </div>
+      <div class="media-topic" data-aos="fade-up" data-aos-delay="100">
+        <span class="media-topic__number">03</span>
+        <h3 class="media-topic__name">AI Ethics & Governance</h3>
+        <p class="media-topic__desc">Ethical frameworks for AI deployment, bias in algorithms, and the role of regulation in shaping responsible AI use in Aotearoa.</p>
+      </div>
+      <div class="media-topic" data-aos="fade-up" data-aos-delay="150">
+        <span class="media-topic__number">04</span>
+        <h3 class="media-topic__name">Maori Data Sovereignty</h3>
+        <p class="media-topic__desc">Indigenous perspectives on data governance, AI development through a Te Tiriti lens, and culturally informed technology practices.</p>
+      </div>
+      <div class="media-topic" data-aos="fade-up" data-aos-delay="200">
+        <span class="media-topic__number">05</span>
+        <h3 class="media-topic__name">AI in NZ Industry</h3>
+        <p class="media-topic__desc">How Wellington and New Zealand businesses are adopting AI, from public sector innovation to the local tech startup ecosystem.</p>
+      </div>
+      <div class="media-topic" data-aos="fade-up" data-aos-delay="250">
+        <span class="media-topic__number">06</span>
+        <h3 class="media-topic__name">Student Tech Careers</h3>
+        <p class="media-topic__desc">The student experience of entering the AI workforce, skills gaps, university AI education, and career pathways in Aotearoa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== PRESS RELEASES ===== #}
+<section class="section" data-aos="fade-up">
+  <div class="container">
+    <span class="section__label">Press Releases</span>
+    <h2 class="section__title">Latest announcements</h2>
+
+    {% for release in press %}
+    <div class="press-item" data-aos="fade-up">
+      <div class="press-item__date">
+        <span class="press-item__date-day">{{ release.date | dateDay }}</span>
+        <span>{{ release.date | dateShortMonth }}</span>
+        <span>{{ release.date | dateYear }}</span>
+      </div>
+      <div class="press-item__content">
+        <h3 class="press-item__title">{{ release.title }}</h3>
+        <p class="press-item__summary">{{ release.summary }}</p>
+        <span class="press-item__tag">{{ release.category }}</span>
+      </div>
+    </div>
+    {% endfor %}
+
+    <p style="margin-top: var(--space-xl); font-family: var(--font-mono); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-muted);">For full press releases or additional information, contact <a href="mailto:{{ site.email }}" style="border-bottom: 2px solid var(--color-accent);">{{ site.email }}</a></p>
+  </div>
+</section>
+
+{# ===== MEDIA GUIDELINES ===== #}
+<section class="section section--surface" data-aos="fade-up">
+  <div class="container container--narrow">
+    <span class="section__label">Media Guidelines</span>
+    <h2 class="section__title">How to reference VicAI</h2>
+
+    <ul class="media-guidelines">
+      <li>
+        <strong>Organisation Name</strong>
+        Use <code>VicAI</code> on first reference, followed by <code>Victoria Artificial Intelligence Society</code> in parentheses. Subsequent references may use <code>VicAI</code> alone.
+      </li>
+      <li>
+        <strong>Attribution</strong>
+        Please attribute quotes to the named spokesperson and their role. Example: <code>Aroha Williams, President of VicAI (Victoria Artificial Intelligence Society)</code>
+      </li>
+      <li>
+        <strong>University Affiliation</strong>
+        VicAI is a student-run club affiliated with Te Herenga Waka &mdash; Victoria University of Wellington. We are not an official university department or research group.
+      </li>
+      <li>
+        <strong>Student Perspectives</strong>
+        Our commentary represents student and community perspectives. For official university positions, please contact VUW Communications directly.
+      </li>
+      <li>
+        <strong>Images & Brand</strong>
+        Contact us for approved logos and brand assets. Please do not modify or crop VicAI branding without prior agreement.
+      </li>
+    </ul>
+  </div>
+</section>
+
+{# ===== CTA ===== #}
+<section class="section section--accent">
+  <div class="container" style="text-align: center;" data-aos="fade-up">
+    <h2 style="margin-bottom: var(--space-md);">Working on a story?</h2>
+    <p style="margin-bottom: var(--space-xl); max-width: 500px; margin-inline: auto;">We're happy to provide commentary, connect you with student voices, or supply background on AI topics relevant to Aotearoa.</p>
+    <a href="mailto:{{ site.email }}" class="btn btn--dark">{{ site.email }}</a>
+  </div>
+</section>

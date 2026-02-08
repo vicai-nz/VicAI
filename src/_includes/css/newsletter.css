@@ -1,0 +1,26 @@
+/* ===== NEWSLETTER ===== */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 500px;
+}
+
+@media (min-width: 640px) {
+  .newsletter-form {
+    flex-direction: row;
+  }
+}
+
+.newsletter-form .form-input {
+  flex: 1;
+  border-color: var(--color-bg);
+}
+
+.newsletter-form .form-input:focus {
+  border-color: var(--color-accent);
+}
+
+.newsletter-form .btn {
+  white-space: nowrap;
+}

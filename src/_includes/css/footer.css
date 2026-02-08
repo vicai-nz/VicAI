@@ -1,0 +1,107 @@
+/* ===== FOOTER ===== */
+.site-footer {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  border-top: var(--border-thick);
+}
+
+.footer__main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  padding-block: var(--space-3xl);
+}
+
+@media (min-width: 768px) {
+  .footer__main {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.footer__logo {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.footer__logo-accent {
+  color: var(--color-accent);
+  -webkit-text-stroke: 2px var(--color-ink);
+  paint-order: stroke fill;
+}
+
+.footer__tagline {
+  font-size: var(--text-xl);
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+}
+
+.footer__uni {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+
+.footer__heading {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: var(--space-lg);
+  opacity: 0.6;
+}
+
+.footer__links a {
+  display: block;
+  font-size: var(--text-sm);
+  padding-block: var(--space-xs);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--ease-fast);
+}
+
+.footer__links a:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+.footer__social a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  padding-block: var(--space-xs);
+  transition: color var(--ease-fast);
+}
+
+.footer__social a:hover {
+  color: var(--color-accent);
+}
+
+.footer__social svg {
+  flex-shrink: 0;
+}
+
+.footer__location {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  opacity: 0.6;
+  margin-top: var(--space-lg);
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(242, 240, 230, 0.2);
+  padding-block: var(--space-lg);
+}
+
+.footer__bottom p {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+}

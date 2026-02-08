@@ -1,0 +1,88 @@
+---
+pagination:
+  data: events
+  size: 1
+  alias: event
+permalink: "events/{{ event.slug }}/"
+layout: base.njk
+eleventyComputed:
+  title: "{{ event.title }}"
+  description: "{{ event.description }}"
+---
+{% css %}{% include "css/event-cards.css" %}{% endcss %}
+
+{# ===== EVENT PAGE ===== #}
+<section class="page-hero page-hero--compact">
+  <div class="container">
+    <a href="/events/" class="back-link" data-aos="fade-up">&larr; All Events</a>
+    <div class="event-page__header" data-aos="fade-up">
+      <span class="tag tag--{{ event.category }} tag--lg">{{ event.category }}</span>
+      <h1 class="page-hero__title">{{ event.title }}</h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <div class="event-detail" data-aos="fade-up">
+
+      {# ===== DATE & TIME ===== #}
+      <div class="event-detail__info">
+        <div class="event-detail__date-block">
+          <span class="event-detail__day">{{ event.date | dateDay }}</span>
+          <span class="event-detail__month">{{ event.date | dateShortMonth }}</span>
+          <span class="event-detail__year">{{ event.date | dateYear }}</span>
+        </div>
+        <div class="event-detail__meta">
+          <p class="event-detail__time">
+            <strong>Time:</strong> {{ event.time }}{% if event.endTime %} — {{ event.endTime }}{% endif %}
+          </p>
+          <p class="event-detail__location">
+            <strong>Location:</strong> {{ event.location }}
+          </p>
+          {% if event.speaker %}
+          <p class="event-detail__speaker">
+            <strong>Speaker:</strong> {{ event.speaker }}
+          </p>
+          {% endif %}
+          {% if event.status == "past" %}
+          <p class="event-detail__status"><span class="tag tag--past">Past Event</span></p>
+          {% endif %}
+        </div>
+      </div>
+
+      {# ===== DESCRIPTION ===== #}
+      <div class="event-detail__body">
+        <p>{{ event.description }}</p>
+      </div>
+
+      {# ===== CALENDAR LINKS ===== #}
+      {% if event.status == "upcoming" %}
+      <div class="event-detail__calendar" data-aos="fade-up">
+        <h2 class="event-detail__calendar-title">Add to your calendar</h2>
+        <p class="event-detail__calendar-desc">Don't miss this one. Add it to whichever calendar you use.</p>
+        <div class="event-detail__calendar-actions">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{ event.title | urlencode }}&dates={{ event.date | calendarDate(event.time) }}/{{ event.date | calendarDate(event.endTime) }}&details={{ event.description | urlencode }}&location={{ event.location | urlencode }}" target="_blank" rel="noopener" class="btn btn--sm">
+            Google Calendar
+          </a>
+          <a href="/events/{{ event.slug }}/event.ics" download class="btn btn--sm btn--outline">
+            Download .ics
+          </a>
+        </div>
+      </div>
+      {% endif %}
+
+      {# ===== SHARE ===== #}
+      <div class="event-detail__share" data-aos="fade-up">
+        <h2 class="event-detail__share-title">Share this event</h2>
+        <p class="event-detail__share-desc">Copy the link and send it to someone who'd be keen.</p>
+        <button type="button" class="btn btn--sm btn--outline" data-copy-url>Copy Link</button>
+      </div>
+
+    </div>
+
+    <div style="margin-top: var(--space-3xl); text-align: center;">
+      <a href="/events/" class="btn btn--outline">&larr; Back to All Events</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,124 @@
+/* ===== BLOG POST ===== */
+.post__header {
+  padding-bottom: var(--space-2xl);
+}
+
+.post__back {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  margin-bottom: var(--space-xl);
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--ease-fast);
+}
+
+.post__back:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+.post__title {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-lg);
+}
+
+.post__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  margin-bottom: var(--space-md);
+}
+
+.post__tags {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.post__content {
+  padding-block: var(--space-2xl);
+}
+
+.post__content h2 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.post__content h3 {
+  font-size: var(--text-xl);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.post__content p {
+  margin-bottom: var(--space-lg);
+  line-height: 1.8;
+}
+
+.post__content ul,
+.post__content ol {
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-xl);
+}
+
+.post__content ul {
+  list-style: disc;
+}
+
+.post__content ol {
+  list-style: decimal;
+}
+
+.post__content li {
+  margin-bottom: var(--space-sm);
+  line-height: 1.7;
+}
+
+.post__content blockquote {
+  border-left: 6px solid var(--color-accent);
+  padding: var(--space-lg) var(--space-xl);
+  margin-block: var(--space-xl);
+  background: var(--color-surface);
+  font-style: italic;
+  font-size: var(--text-lg);
+}
+
+.post__content a {
+  border-bottom: 2px solid var(--color-accent);
+  transition: border-color var(--ease-fast);
+}
+
+.post__content a:hover {
+  border-bottom-color: var(--color-accent-alt);
+}
+
+.post__content code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.1em 0.4em;
+}
+
+.post__content pre {
+  background: var(--color-ink);
+  color: var(--color-accent);
+  padding: var(--space-xl);
+  border: var(--border-thick);
+  overflow-x: auto;
+  margin-bottom: var(--space-lg);
+}
+
+.post__content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}

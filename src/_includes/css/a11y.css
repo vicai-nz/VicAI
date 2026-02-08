@@ -1,0 +1,71 @@
+/* ===== ANIMATIONS (AOS overrides) ===== */
+[data-aos] {
+  transition-duration: 500ms !important;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-accent);
+  color: var(--color-ink);
+  border: var(--border);
+  z-index: 200;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: var(--space-md);
+}
+
+*:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-animate],
+  [data-animate-stagger] > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .site-header, .site-footer, .btn, .marquee, .skip-link {
+    display: none !important;
+  }
+  body {
+    color: #000;
+    background: #fff;
+  }
+  * {
+    box-shadow: none !important;
+  }
+}

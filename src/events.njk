@@ -1,0 +1,56 @@
+---
+layout: base.njk
+title: Events
+description: "Talks, workshops, hackathons, and socials from VicAI — the Victoria Artificial Intelligence Society."
+---
+{% css %}{% include "css/event-cards.css" %}{% endcss %}
+{% css %}{% include "css/filters.css" %}{% endcss %}
+
+{# ===== PAGE HERO ===== #}
+<section class="page-hero">
+  <div class="container">
+    <span class="section__label">Events</span>
+    <h1 class="page-hero__title" data-aos="fade-up">Where Wellington's AI community learns, builds, and connects.</h1>
+    <p class="page-hero__subtitle" data-aos="fade-up">Talks, workshops, hackathons, and socials — all free, all welcome.</p>
+    <p class="page-hero__cal" data-aos="fade-up" style="margin-top: var(--space-lg);">
+      <a href="/calendar.ics" class="btn btn--sm btn--outline">Subscribe to Calendar</a>
+    </p>
+  </div>
+</section>
+
+{# ===== FILTER BAR ===== #}
+<section class="section" style="padding-top: var(--space-2xl);">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="talk">Talks</button>
+      <button class="filter-btn" data-filter="workshop">Workshops</button>
+      <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+      <button class="filter-btn" data-filter="social">Social</button>
+      <input type="search" class="filter-search" placeholder="Search events..." aria-label="Search events">
+      <p class="filter-count" aria-live="polite"></p>
+    </div>
+
+    {# ===== UPCOMING EVENTS ===== #}
+    <span class="section__label">Upcoming</span>
+    <div class="grid grid--auto" >
+      {% for event in events %}
+        {% if event.status == "upcoming" %}
+          {% include "event-card.njk" %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {# ===== PAST EVENTS ===== #}
+    <div style="margin-top: var(--space-3xl);">
+      <span class="section__label" style="color: var(--color-muted);">Past Events</span>
+      <div class="grid grid--auto">
+        {% for event in events %}
+          {% if event.status == "past" %}
+            {% include "event-card.njk" %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

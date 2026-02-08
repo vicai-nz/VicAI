@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:4J2R46MwM6sGKcbdZUdq2
+SUMMARY:Introduction to Large Language Models
+DTSTAMP:20260208T073140Z
+DTSTART:20260315T180000Z
+DTEND:20260315T193000Z
+DESCRIPTION:A comprehensive introduction to how LLMs work\, from transforme
+	rs to RLHF. No prior ML experience needed — open to students from all facu
+	lties.
+LOCATION:Cotton Building CO350\, Kelburn Campus
+ORGANIZER;CN="VicAI":MAILTO:vicai@clubs.vuw.ac.nz
+END:VEVENT
+END:VCALENDAR

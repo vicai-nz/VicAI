@@ -1,0 +1,127 @@
+---
+layout: base.njk
+title: About
+description: "Learn about VicAI — our mission, purpose, and the people behind Victoria Artificial Intelligence Society."
+---
+{% css %}{% include "css/team-cards.css" %}{% endcss %}
+{% css %}{% include "css/accordion.css" %}{% endcss %}
+
+{# ===== PAGE HERO ===== #}
+<section class="page-hero">
+  <div class="container">
+    <span class="section__label">About Us</span>
+    <h1 class="page-hero__title" data-aos="fade-up">Our mission is to make AI accessible to everyone at Te Herenga Waka.</h1>
+  </div>
+</section>
+
+{# ===== MISSION EXPANDED ===== #}
+<section class="section">
+  <div class="container">
+    <div class="grid grid--editorial" data-aos="fade-up">
+      <div>
+        <p class="mission-quote">AI literacy shouldn't depend on what faculty you're in.</p>
+      </div>
+      <div>
+        <p class="mission-text">VicAI was founded on the belief that artificial intelligence will shape every industry, every discipline, and every community. We exist to ensure students across Victoria University of Wellington — whether studying computer science, law, design, or te reo Maori — have the opportunity to understand, build with, and think critically about AI.</p>
+        <p class="mission-text">We're based at Kelburn Campus in Poneke (Wellington), Aotearoa New Zealand. Our community includes undergraduates, postgraduates, and academic advisors from the School of Engineering and Computer Science, the School of Mathematics and Statistics, and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== BACKGROUND ===== #}
+<section class="section section--surface" data-aos="fade-up">
+  <div class="container container--narrow">
+    <span class="section__label">Our Story</span>
+    <h2 class="section__title">Background & Purpose</h2>
+    <p>VicAI brings together curious and passionate people from diverse backgrounds into a community that collaborates on AI for a better future. What defines us is our culture of openness — from first lines of code to working alongside industry, we share the same drive to build together and help each other grow.</p>
+    <p>Wellington's tech ecosystem is thriving. Companies like Xero, TradeMe, and Soul Machines were born here. The government is actively adopting AI across public services. We believe students should be at the table — not just as future employees, but as critical thinkers shaping how AI is used in Aotearoa.</p>
+    <p>Our work is structured into five teams: Labs, Education, Events, Outreach & Diversity, and Safety & Governance. Each team contributes in a unique way — from running research projects and workshops to leading ethical discussions, community engagement, and mentorship initiatives.</p>
+    <p>We take seriously the responsibility of working with AI in the context of Aotearoa. This includes engaging with questions of Maori data sovereignty, indigenous perspectives on technology, and ensuring AI development reflects the values of Te Tiriti o Waitangi.</p>
+    <p style="margin-top: var(--space-xl);"><strong>AI for everyone — built together in Poneke.</strong></p>
+  </div>
+</section>
+
+{# ===== COMMITTEE ===== #}
+<section class="section" data-aos="fade-up">
+  <div class="container">
+    <span class="section__label">Leadership</span>
+    <h2 class="section__title">Executive Committee</h2>
+    <div class="grid grid--3" >
+      {% for member in team.committee %}
+        {% include "team-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== FAQ ===== #}
+<section class="section section--surface" data-aos="fade-up">
+  <div class="container container--narrow">
+    <span class="section__label">FAQ</span>
+    <h2 class="section__title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" aria-controls="faq-1">
+        Who can join VicAI?
+      </button>
+      <div class="faq-item__answer" id="faq-1">
+        <p>VicAI is open to all students enrolled at Victoria University of Wellington, regardless of your faculty, degree, or year of study. You don't need any prior experience with AI or programming. We welcome curious people from every background.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" aria-controls="faq-2">
+        Do I need to know how to code?
+      </button>
+      <div class="faq-item__answer" id="faq-2">
+        <p>Not at all. Many of our events are designed for beginners, and our Education team creates resources for all skill levels. Some of our most active members come from arts, law, and commerce backgrounds. AI literacy is about more than code.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" aria-controls="faq-3">
+        Is there a membership fee?
+      </button>
+      <div class="faq-item__answer" id="faq-3">
+        <p>No. VicAI membership is free. We're funded through university support and industry sponsorships. All of our events are free to attend.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" aria-controls="faq-4">
+        How can I get involved beyond attending events?
+      </button>
+      <div class="faq-item__answer" id="faq-4">
+        <p>Join one of our five teams! We're always looking for people to help with research projects (Labs), create workshops and learning resources (Education), organise events (Events), do community outreach (Outreach & Diversity), or contribute to AI ethics discussions (Safety & Governance). You can also write for our blog.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" aria-controls="faq-5">
+        Where do events take place?
+      </button>
+      <div class="faq-item__answer" id="faq-5">
+        <p>Most of our events are held on Kelburn Campus — primarily in the Cotton Building and The Hub. Some industry events and social gatherings happen in central Wellington. All venues are listed on each event's details.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" aria-controls="faq-6">
+        Can postgraduate students and staff join?
+      </button>
+      <div class="faq-item__answer" id="faq-6">
+        <p>Yes! We welcome undergraduates, honours students, master's students, PhD candidates, and academic staff. Our Senior Advisor is a lecturer in the School of ECS. The more diverse our community, the richer our discussions.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" aria-controls="faq-7">
+        Can companies collaborate with or sponsor VicAI?
+      </button>
+      <div class="faq-item__answer" id="faq-7">
+        <p>We welcome partnerships that align with our educational and community mission. We're particularly interested in collaborating with Wellington-based and NZ-based companies working in AI. Contact us at <a href="mailto:{{ site.email }}">{{ site.email }}</a> to discuss opportunities.</p>
+      </div>
+    </div>
+  </div>
+</section>

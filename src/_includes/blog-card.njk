@@ -1,0 +1,22 @@
+<article class="card blog-card" data-aos="fade-up">
+  <div class="blog-card__body">
+    {% if post.data.tags %}
+    <div class="blog-card__tags">
+      {% for tag in post.data.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <h3 class="blog-card__title">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h3>
+    {% if post.data.excerpt %}
+    <p class="blog-card__excerpt">{{ post.data.excerpt }}</p>
+    {% endif %}
+    <div class="blog-card__meta">
+      <span class="blog-card__author">{{ post.data.author }}</span>
+      <time datetime="{{ post.date | dateISO }}">{{ post.date | dateDisplay }}</time>
+      <span class="blog-card__reading-time">{{ post.templateContent | timeToRead }}</span>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,56 @@
+/* ===== TEAM CARDS ===== */
+.team-card {
+  text-align: center;
+}
+
+.team-card__photo {
+  width: 100px;
+  height: 100px;
+  border: var(--border-thick);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  background: var(--color-bg);
+  transition: border-color var(--ease-fast), background-color var(--ease-fast);
+}
+
+.team-card:hover .team-card__photo {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+}
+
+.team-card__initials {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+.team-card__name {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.team-card .tag {
+  margin-bottom: var(--space-sm);
+}
+
+.team-card__bio {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-bottom: var(--space-md);
+}
+
+.team-card__links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.team-card__links a {
+  transition: color var(--ease-fast);
+}
+
+.team-card__links a:hover {
+  color: var(--color-accent-alt);
+}

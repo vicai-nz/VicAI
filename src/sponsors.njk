@@ -1,0 +1,98 @@
+---
+layout: base.njk
+title: Sponsors
+description: "Our industry partners and sponsors who support VicAI's mission."
+---
+{% css %}{% include "css/sponsors.css" %}{% endcss %}
+
+{# ===== PAGE HERO ===== #}
+<section class="page-hero">
+  <div class="container">
+    <span class="section__label">Sponsors</span>
+    <h1 class="page-hero__title" data-aos="fade-up">Our Partners</h1>
+    <p class="page-hero__subtitle" data-aos="fade-up">We thank our industry partners for supporting VicAI with the resources and opportunities to advance AI literacy in Aotearoa.</p>
+  </div>
+</section>
+
+{# ===== SPONSOR TIERS ===== #}
+<section class="section">
+  <div class="container">
+
+    {# Platinum #}
+    {% if sponsors.platinum.length %}
+    <div class="sponsor-tier" data-aos="fade-up">
+      <h2 class="sponsor-tier__label">Platinum</h2>
+      <div class="grid grid--2">
+        {% for sponsor in sponsors.platinum %}
+        <div class="card sponsor-card sponsor-card--platinum">
+          <h3 class="sponsor-card__name"><a href="{{ sponsor.url }}" target="_blank" rel="noopener">{{ sponsor.name }}</a></h3>
+          <p class="sponsor-card__desc">{{ sponsor.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {# Gold #}
+    {% if sponsors.gold.length %}
+    <div class="sponsor-tier" data-aos="fade-up">
+      <h2 class="sponsor-tier__label">Gold</h2>
+      <div class="grid grid--2">
+        {% for sponsor in sponsors.gold %}
+        <div class="card sponsor-card">
+          <h3 class="sponsor-card__name"><a href="{{ sponsor.url }}" target="_blank" rel="noopener">{{ sponsor.name }}</a></h3>
+          <p class="sponsor-card__desc">{{ sponsor.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {# Silver #}
+    {% if sponsors.silver.length %}
+    <div class="sponsor-tier" data-aos="fade-up">
+      <h2 class="sponsor-tier__label">Silver</h2>
+      <div class="grid grid--3">
+        {% for sponsor in sponsors.silver %}
+        <div class="card sponsor-card">
+          <h3 class="sponsor-card__name"><a href="{{ sponsor.url }}" target="_blank" rel="noopener">{{ sponsor.name }}</a></h3>
+          <p class="sponsor-card__desc">{{ sponsor.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+{# ===== PARTNERSHIP BENEFITS ===== #}
+<section class="section section--surface" data-aos="fade-up">
+  <div class="container">
+    <div class="grid grid--editorial">
+      <div>
+        <span class="section__label">Why Partner with Us</span>
+        <h2 class="section__title">Supporting the next generation of AI practitioners in Aotearoa</h2>
+      </div>
+      <div>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: var(--space-md) 0; border-bottom: var(--border); font-size: var(--text-sm);">Visibility at all VicAI events and workshops</li>
+          <li style="padding: var(--space-md) 0; border-bottom: var(--border); font-size: var(--text-sm);">Logo placement on our website and materials</li>
+          <li style="padding: var(--space-md) 0; border-bottom: var(--border); font-size: var(--text-sm);">Access to a talent pipeline of AI-skilled students</li>
+          <li style="padding: var(--space-md) 0; border-bottom: var(--border); font-size: var(--text-sm);">Opportunity to host co-branded workshops or talks</li>
+          <li style="padding: var(--space-md) 0; border-bottom: var(--border); font-size: var(--text-sm);">Direct connection to Wellington's university AI community</li>
+          <li style="padding: var(--space-md) 0; font-size: var(--text-sm);">Priority involvement in hackathon judging and mentoring</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== CTA ===== #}
+<section class="section section--accent">
+  <div class="container" style="text-align: center;" data-aos="fade-up">
+    <h2 style="margin-bottom: var(--space-md);">Partner with VicAI</h2>
+    <p style="margin-bottom: var(--space-xl); max-width: 500px; margin-inline: auto;">Interested in sponsoring VicAI or collaborating on an event? We'd love to hear from you.</p>
+    <a href="mailto:{{ site.email }}" class="btn btn--dark">{{ site.email }}</a>
+  </div>
+</section>

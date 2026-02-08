@@ -1,0 +1,38 @@
+{
+  "platinum": [
+    {
+      "name": "Anthropic",
+      "url": "https://anthropic.com",
+      "description": "AI safety and research company, creators of Claude."
+    }
+  ],
+  "gold": [
+    {
+      "name": "Xero",
+      "url": "https://xero.com",
+      "description": "Wellington-born global accounting platform."
+    },
+    {
+      "name": "Datacom",
+      "url": "https://datacom.com",
+      "description": "Australasia's largest locally-owned tech company."
+    }
+  ],
+  "silver": [
+    {
+      "name": "Soul Machines",
+      "url": "https://soulmachines.com",
+      "description": "NZ-based autonomous animation and conversational AI."
+    },
+    {
+      "name": "Catalyst Cloud",
+      "url": "https://catalystcloud.nz",
+      "description": "New Zealand's own cloud infrastructure provider."
+    },
+    {
+      "name": "WGTN.ai",
+      "url": "#",
+      "description": "Wellington AI community meetup group."
+    }
+  ]
+}

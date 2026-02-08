@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:YYT6rBuQZxAe_rlxmA7hj
+SUMMARY:End-of-Trimester Social
+DTSTAMP:20260208T073140Z
+DTSTART:20260228T173000Z
+DTEND:20260228T200000Z
+DESCRIPTION:Casual hangout at Hashigo Zake. Meet fellow AI enthusiasts\, sw
+	ap project ideas\, unwind after exams. All welcome.
+LOCATION:Hashigo Zake\, 25 Taranaki St\, Te Aro
+ORGANIZER;CN="VicAI":MAILTO:vicai@clubs.vuw.ac.nz
+END:VEVENT
+END:VCALENDAR

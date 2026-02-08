@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Blog
+description: "Articles, opinions, tutorials, and event recaps from the VicAI community."
+---
+{% css %}{% include "css/blog-cards.css" %}{% endcss %}
+
+{# ===== PAGE HERO ===== #}
+<section class="page-hero">
+  <div class="container">
+    <span class="section__label">Blog</span>
+    <h1 class="page-hero__title" data-aos="fade-up">Thoughts, tutorials, and stories from VicAI</h1>
+    <p class="page-hero__subtitle" data-aos="fade-up">Written by students, for students.</p>
+  </div>
+</section>
+
+{# ===== BLOG LISTING ===== #}
+<section class="section">
+  <div class="container">
+    <div class="grid grid--auto" >
+      {% set posts = collections.blog %}
+      {% for post in posts %}
+        {% include "blog-card.njk" %}
+      {% endfor %}
+    </div>
+
+    {% if not collections.blog.length %}
+    <p style="text-align: center; color: var(--color-muted); font-family: var(--font-mono); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.1em;">No posts yet. Check back soon.</p>
+    {% endif %}
+  </div>
+</section>
+
+{# ===== WRITE FOR US ===== #}
+<section class="section section--accent">
+  <div class="container" style="text-align: center;" data-aos="fade-up">
+    <h2 style="margin-bottom: var(--space-md);">Want to write for VicAI?</h2>
+    <p style="margin-bottom: var(--space-xl); max-width: 500px; margin-inline: auto;">We're always looking for student contributors. Share your AI research, opinions, tutorials, or event experiences.</p>
+    <a href="/contact/" class="btn btn--dark">Get in Touch</a>
+  </div>
+</section>

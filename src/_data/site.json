@@ -1,0 +1,15 @@
+{
+  "name": "VicAI",
+  "fullName": "Victoria Artificial Intelligence Society",
+  "url": "https://vicai.org.nz",
+  "tagline": "Advancing AI at Victoria University of Wellington",
+  "university": "Victoria University of Wellington",
+  "email": "contact@vicai.org.nz",
+  "location": "Kelburn Campus, Wellington, Aotearoa NZ",
+  "social": {
+    "instagram": "https://instagram.com/vicai.nz",
+    "linkedin": "https://linkedin.com/company/vicai",
+    "github": "https://github.com/vicai-nz",
+    "email": "mailto:contact@vicai.org.nz"
+  }
+}

@@ -1,0 +1,61 @@
+/* ===== BUTTONS ===== */
+.btn {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-md) var(--space-xl);
+  border: var(--border-thick);
+  background: var(--color-accent);
+  color: var(--color-ink);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform var(--ease-fast), box-shadow var(--ease-fast);
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--color-shadow);
+}
+
+.btn:active {
+  transform: translate(var(--shadow-x), var(--shadow-y));
+  box-shadow: 0 0 0 var(--color-shadow);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.btn--outline {
+  background: transparent;
+}
+
+.btn--outline:hover {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+.btn--dark {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  box-shadow: var(--shadow-accent);
+}
+
+.btn--dark:hover {
+  box-shadow: 7px 7px 0 var(--color-accent);
+}
+
+.btn--sm {
+  font-size: var(--text-xs);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.btn--full {
+  width: 100%;
+}

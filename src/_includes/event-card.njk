@@ -1,0 +1,20 @@
+<article class="card event-card" data-category="{{ event.category }}" data-title="{{ event.title | lower }}" data-aos="fade-up">
+  <a href="/events/{{ event.slug }}/" class="event-card__link">
+    <div class="event-card__header">
+      <span class="tag tag--{{ event.category }}">{{ event.category }}</span>
+      <time class="event-card__date" datetime="{{ event.date }}">
+        <span class="event-card__day">{{ event.date | dateDay }}</span>
+        <span class="event-card__month">{{ event.date | dateShortMonth }}</span>
+      </time>
+    </div>
+    <h3 class="event-card__title">{{ event.title }}</h3>
+    <p class="event-card__desc">{{ event.description }}</p>
+    <div class="event-card__meta">
+      <span class="event-card__time">{{ event.time }}{% if event.endTime %} — {{ event.endTime }}{% endif %}</span>
+      <span class="event-card__location">{{ event.location }}</span>
+    </div>
+    {% if event.speaker %}
+    <p class="event-card__speaker">{{ event.speaker }}</p>
+    {% endif %}
+  </a>
+</article>

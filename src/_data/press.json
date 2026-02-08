@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-02-01",
+    "title": "VicAI Launches 2026 Programme with Record Membership",
+    "summary": "Victoria Artificial Intelligence Society opens the academic year with over 200 registered members and an expanded calendar of talks, workshops, and hackathons across Trimester 1.",
+    "category": "announcement"
+  },
+  {
+    "date": "2026-01-15",
+    "title": "VicAI Partners with Anthropic for AI Safety Workshop Series",
+    "summary": "New partnership brings AI safety research expertise to Wellington students through a series of hands-on workshops at Kelburn Campus, beginning March 2026.",
+    "category": "partnership"
+  },
+  {
+    "date": "2025-11-20",
+    "title": "VicAI Hackathon 2025 Winners Announced",
+    "summary": "Three student teams recognised for innovative AI solutions addressing public sector challenges in Aotearoa New Zealand. Over 80 participants competed across 24 hours.",
+    "category": "event"
+  },
+  {
+    "date": "2025-09-10",
+    "title": "VicAI Submits to Government Consultation on AI Regulation",
+    "summary": "Student-led submission to the Ministry of Business, Innovation and Employment draws on perspectives from computer science, law, and te ao Maori.",
+    "category": "announcement"
+  },
+  {
+    "date": "2025-07-22",
+    "title": "VicAI and Xero Co-Host Industry Night on AI in Finance",
+    "summary": "Wellington's tech community gathered at Kelburn Campus for a panel discussion on machine learning applications in financial technology, featuring Xero engineers and VUW researchers.",
+    "category": "event"
+  }
+]

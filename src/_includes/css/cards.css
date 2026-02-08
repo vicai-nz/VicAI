@@ -1,0 +1,49 @@
+/* ===== CARDS ===== */
+.card {
+  background: var(--color-surface);
+  border: var(--border-thick);
+  box-shadow: var(--shadow);
+  padding: var(--space-xl);
+  transition: transform var(--ease-fast), box-shadow var(--ease-fast);
+}
+
+.card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== TAGS ===== */
+.tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: var(--space-xs) var(--space-sm);
+  border: 2px solid var(--color-ink);
+  background: transparent;
+  display: inline-block;
+  line-height: 1;
+}
+
+.tag--accent {
+  background: var(--color-accent);
+}
+
+.tag--talk {
+  background: var(--color-accent);
+}
+
+.tag--workshop {
+  background: var(--color-accent-alt);
+  color: var(--color-surface);
+}
+
+.tag--hackathon {
+  background: var(--color-ink);
+  color: var(--color-accent);
+}
+
+.tag--social {
+  background: var(--color-surface);
+}

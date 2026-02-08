@@ -1,0 +1,122 @@
+---
+layout: base.njk
+title: Home
+description: "Victoria Artificial Intelligence Society — Advancing AI at Te Herenga Waka, Victoria University of Wellington."
+---
+{% css %}{% include "css/event-cards.css" %}{% endcss %}
+{% css %}{% include "css/blog-cards.css" %}{% endcss %}
+{% css %}{% include "css/sponsors.css" %}{% endcss %}
+{% css %}{% include "css/newsletter.css" %}{% endcss %}
+{% css %}{% include "css/forms.css" %}{% endcss %}
+
+{# ===== HERO ===== #}
+<section class="hero">
+  <div class="container hero__content">
+    <span class="hero__overline" data-aos="fade-down">Est. 2026 — Poneke, Aotearoa</span>
+    <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">Vic<span class="hero__title-accent">AI</span></h1>
+    <p class="hero__tagline" data-aos="fade-up" data-aos-delay="250">Advancing artificial intelligence at Te Herenga Waka — Victoria University of Wellington</p>
+    <div class="hero__actions" data-aos="fade-up" data-aos-delay="400">
+      <a href="/join/" class="btn">Join the Society</a>
+      <a href="/events/" class="btn btn--outline">Upcoming Events</a>
+    </div>
+  </div>
+  <div class="hero__decor" aria-hidden="true"></div>
+  <div class="hero__decor-inner" aria-hidden="true"></div>
+  <span class="hero__corner-mark hero__corner-mark--br" aria-hidden="true">52.4739&deg;S / 174.7762&deg;E</span>
+</section>
+
+{# ===== FEATURED EVENTS ===== #}
+<section class="section">
+  <div class="container">
+    <span class="section__label" data-aos="fade-right">Upcoming Events</span>
+    <div class="grid grid--3">
+      {% for event in events %}
+        {% if event.featured and event.status == "upcoming" %}
+          {% include "event-card.njk" %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="section__action" data-aos="fade-up">
+      <a href="/events/" class="btn btn--sm btn--outline">View All Events</a>
+    </div>
+  </div>
+</section>
+
+{# ===== MISSION ===== #}
+<section class="section section--accent">
+  <div class="container">
+    <div class="grid grid--editorial" data-aos="fade-up">
+      <div>
+        <span class="section__label">Our Belief</span>
+        <p class="mission-quote">We believe AI literacy is for everyone — not just computer scientists.</p>
+      </div>
+      <div>
+        <p class="mission-text">VicAI brings together students from every faculty — engineering, arts, law, commerce, science — to learn, build, and think critically about artificial intelligence. We're a community of curious people in Poneke, exploring AI's role in shaping a better Aotearoa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== PILLARS ===== #}
+<section class="section">
+  <div class="container">
+    <span class="section__label" data-aos="fade-right">What We Do</span>
+    <h2 class="section__title" data-aos="fade-up">Five Pillars. One Purpose.</h2>
+    <div class="pillars">
+      {% for group in team.groups %}
+      <div class="pillar-card" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+        <span class="pillar-card__number">{{ group.label }}</span>
+        <h3 class="pillar-card__name">{{ group.name }}</h3>
+        <p class="pillar-card__desc">{{ group.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== SPONSORS STRIP ===== #}
+<section class="section section--surface">
+  <div class="container" data-aos="fade-up">
+    <span class="section__label">Our Sponsors</span>
+    <div class="sponsor-strip">
+      {% for sponsor in sponsors.platinum %}
+      <a href="{{ sponsor.url }}" class="sponsor-strip__item" target="_blank" rel="noopener">{{ sponsor.name }}</a>
+      {% endfor %}
+      {% for sponsor in sponsors.gold %}
+      <a href="{{ sponsor.url }}" class="sponsor-strip__item" target="_blank" rel="noopener">{{ sponsor.name }}</a>
+      {% endfor %}
+      {% for sponsor in sponsors.silver %}
+      <a href="{{ sponsor.url }}" class="sponsor-strip__item" target="_blank" rel="noopener">{{ sponsor.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== BLOG PREVIEW ===== #}
+<section class="section">
+  <div class="container">
+    <span class="section__label" data-aos="fade-right">Latest from the Blog</span>
+    <div class="grid grid--3">
+      {% set posts = collections.blog %}
+      {% for post in posts | limit(3) %}
+        {% include "blog-card.njk" %}
+      {% endfor %}
+    </div>
+    <div class="section__action" data-aos="fade-up">
+      <a href="/blog/" class="btn btn--sm btn--outline">Read the Blog</a>
+    </div>
+  </div>
+</section>
+
+{# ===== NEWSLETTER ===== #}
+<section class="section section--dark">
+  <div class="container" data-aos="fade-up">
+    <span class="section__label section__label--accent">Stay in the Loop</span>
+    <h2 class="section__title section__title--light">Get our monthly newsletter</h2>
+    <p class="newsletter-desc">Events, workshops, and AI news from Wellington. No spam. Unsubscribe anytime.</p>
+    <form class="newsletter-form">
+      <input type="email" class="form-input" placeholder="your.email@vuw.ac.nz" aria-label="Email address" required>
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
+  </div>
+</section>

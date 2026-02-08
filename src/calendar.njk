@@ -1,0 +1,5 @@
+---
+permalink: calendar.ics
+eleventyExcludeFromCollections: true
+---
+{{ collections.calendarEvents | toCalendar | safe }}

@@ -1,0 +1,219 @@
+/* ===== EVENT CARDS ===== */
+.event-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.event-card__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.event-card__day {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+.event-card__month {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.event-card__title {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.event-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-bottom: var(--space-md);
+}
+
+.event-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.event-card__speaker {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-muted);
+  margin-top: var(--space-sm);
+}
+
+.event-card.is-hidden {
+  display: none;
+}
+
+.event-card__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== INDIVIDUAL EVENT PAGE ===== */
+.page-hero--compact {
+  padding-bottom: var(--space-lg);
+}
+
+.back-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-lg);
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.back-link:hover {
+  color: var(--color-accent-alt);
+  border-color: var(--color-accent-alt);
+}
+
+.event-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.tag--lg {
+  font-size: var(--text-sm);
+  padding: var(--space-xs) var(--space-md);
+  align-self: flex-start;
+}
+
+.tag--past {
+  background: var(--color-muted);
+  color: var(--color-bg);
+}
+
+.event-detail {
+  border: var(--border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+}
+
+.event-detail__info {
+  display: flex;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  border-bottom: var(--border);
+}
+
+.event-detail__date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: var(--space-md);
+  background: var(--color-accent);
+  border: var(--border);
+  line-height: 1;
+  text-align: center;
+}
+
+.event-detail__day {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+}
+
+.event-detail__month {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-xs);
+}
+
+.event-detail__year {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+.event-detail__meta p {
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-base);
+}
+
+.event-detail__meta strong {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.event-detail__body {
+  padding: var(--space-xl);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  border-bottom: var(--border);
+}
+
+.event-detail__calendar {
+  padding: var(--space-xl);
+  border-bottom: var(--border);
+}
+
+.event-detail__calendar-title,
+.event-detail__share-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.event-detail__calendar-desc,
+.event-detail__share-desc {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.event-detail__calendar-actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.event-detail__share {
+  padding: var(--space-xl);
+}
+
+@media (max-width: 640px) {
+  .event-detail__info {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .event-detail__date-block {
+    flex-direction: row;
+    gap: var(--space-sm);
+    min-width: auto;
+    align-self: flex-start;
+  }
+
+  .event-detail__month {
+    margin-top: 0;
+  }
+
+  .event-detail__year {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "committee": [
+    {
+      "name": "Aroha Williams",
+      "role": "President",
+      "initials": "AW",
+      "bio": "Final-year Computer Science student. Passionate about making AI accessible to students from all backgrounds across Aotearoa.",
+      "linkedin": "https://linkedin.com/in/",
+      "email": "mailto:vicai@clubs.vuw.ac.nz"
+    },
+    {
+      "name": "James Nakamura",
+      "role": "Vice President",
+      "initials": "JN",
+      "bio": "Studying Data Science and Statistics. Leads our workshop programme and ML reading group.",
+      "linkedin": "https://linkedin.com/in/",
+      "email": "mailto:vicai@clubs.vuw.ac.nz"
+    },
+    {
+      "name": "Priya Sharma",
+      "role": "Treasurer",
+      "initials": "PS",
+      "bio": "Commerce and Computer Science double major. Manages sponsorships and keeps the books balanced.",
+      "linkedin": "https://linkedin.com/in/",
+      "email": "mailto:vicai@clubs.vuw.ac.nz"
+    },
+    {
+      "name": "Ethan Cole",
+      "role": "Secretary",
+      "initials": "EC",
+      "bio": "Engineering student with a focus on robotics and embedded AI systems. Handles communications and logistics.",
+      "linkedin": "https://linkedin.com/in/",
+      "email": "mailto:vicai@clubs.vuw.ac.nz"
+    },
+    {
+      "name": "Dr. Marcus Lee",
+      "role": "Senior Advisor",
+      "initials": "ML",
+      "bio": "Lecturer in the School of Engineering and Computer Science. Research interests in NLP and AI fairness.",
+      "linkedin": "https://linkedin.com/in/",
+      "email": "mailto:vicai@clubs.vuw.ac.nz"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Labs",
+      "label": "01",
+      "description": "Collaborative AI research projects, reading groups, and paper discussions. We run semester-long projects and publish findings on GitHub."
+    },
+    {
+      "name": "Education",
+      "label": "02",
+      "description": "Workshops, tutorials, blog content, and learning resources. From intro Python to advanced ML — we create pathways for every skill level."
+    },
+    {
+      "name": "Events",
+      "label": "03",
+      "description": "Speaker events, industry panels, hackathons, and social gatherings. We bring the Wellington AI community together."
+    },
+    {
+      "name": "Outreach & Diversity",
+      "label": "04",
+      "description": "Community engagement, school visits, and inclusive programming. We believe AI should reflect everyone — not just the loudest voices in the room."
+    },
+    {
+      "name": "Safety & Governance",
+      "label": "05",
+      "description": "AI ethics discussions, responsible AI research, and policy engagement. Including work on Maori data sovereignty and AI governance in Aotearoa."
+    }
+  ]
+}

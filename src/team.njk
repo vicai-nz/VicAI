@@ -1,0 +1,56 @@
+---
+layout: base.njk
+title: Team
+description: "Meet the people behind VicAI — our committee and working groups."
+---
+{% css %}{% include "css/team-cards.css" %}{% endcss %}
+{% css %}{% include "css/contact.css" %}{% endcss %}
+
+{# ===== PAGE HERO ===== #}
+<section class="page-hero">
+  <div class="container">
+    <span class="section__label">Our Team</span>
+    <h1 class="page-hero__title" data-aos="fade-up">The people behind VicAI</h1>
+    <p class="page-hero__subtitle" data-aos="fade-up">A student-run society powered by volunteers who care about AI.</p>
+  </div>
+</section>
+
+{# ===== COMMITTEE ===== #}
+<section class="section">
+  <div class="container">
+    <span class="section__label">Executive Committee</span>
+    <div class="grid grid--3" >
+      {% for member in team.committee %}
+        {% include "team-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== WORKING GROUPS ===== #}
+<section class="section section--surface" data-aos="fade-up">
+  <div class="container">
+    <span class="section__label">Working Groups</span>
+    <h2 class="section__title">Five Teams. One Purpose.</h2>
+    <p style="max-width: 600px; margin-bottom: var(--space-2xl); color: var(--color-muted);">Each team contributes to the society in a unique way. Interested in joining a team? <a href="/join/" style="border-bottom: 2px solid var(--color-accent);">Get in touch.</a></p>
+
+    {% for group in team.groups %}
+    <div class="group-row">
+      <div class="group-row__label">{{ group.label }}</div>
+      <div class="group-row__content">
+        <h3 class="group-row__name">{{ group.name }}</h3>
+        <p class="group-row__desc">{{ group.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{# ===== CTA ===== #}
+<section class="section section--accent">
+  <div class="container" style="text-align: center;" data-aos="fade-up">
+    <h2 style="margin-bottom: var(--space-md);">Want to be part of the team?</h2>
+    <p style="margin-bottom: var(--space-xl); max-width: 500px; margin-inline: auto;">We're always looking for enthusiastic people to join our working groups. No experience required — just curiosity.</p>
+    <a href="/join/" class="btn btn--dark">Apply Now</a>
+  </div>
+</section>
